@@ -1,4 +1,4 @@
-import { IGenre, IGenreEditInput } from '@/shared/types/movie.interface';
+import { IGenre, IGenreEditInput } from '@/shared/types/genre.interface';
 
 import { getGenresUrl } from '@/config/api.config';
 

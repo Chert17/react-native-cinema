@@ -3,6 +3,8 @@ import { FC, PropsWithChildren } from 'react';
 import { Platform, SafeAreaView, View, ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import AdminButton from '@/components/ui/layout/AdminButton';
+
 interface ILayout {
   className?: string;
   style?: ViewStyle;
@@ -11,8 +13,8 @@ interface ILayout {
 
 const Layout: FC<PropsWithChildren<ILayout>> = ({
   children,
-  className,
   style,
+  className,
   isHasPadding,
 }) => {
   const { top } = useSafeAreaInsets();
@@ -20,7 +22,9 @@ const Layout: FC<PropsWithChildren<ILayout>> = ({
   return (
     <SafeAreaView className="flex-1">
       <View
-        className={cn('pt-8  flex-1', className, { 'px-6': isHasPadding })}
+        className={cn('flex-1', className, {
+          'px-6': isHasPadding,
+        })}
         style={{
           paddingTop: Platform.OS === 'ios' ? top / 6 : top * 1.7,
           ...style,
@@ -28,6 +32,7 @@ const Layout: FC<PropsWithChildren<ILayout>> = ({
       >
         {children}
       </View>
+      <AdminButton />
     </SafeAreaView>
   );
 };

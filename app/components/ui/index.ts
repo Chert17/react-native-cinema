@@ -11,6 +11,11 @@ export { default as DismissKeyboard } from './form-elements/field/DismissKeyboar
 export { default as Layout } from './layout/Layout';
 export { default as BottomMenu } from './layout/bottom-menu/BottomMenu';
 
+export { default as AdminNavigation } from './admin-navigation/AdminNavigation';
+
+export { default as AdminTableHeader } from './admin/table-header/AdminHeader';
+export { default as AdminTable } from './admin/table/AdminTable';
+
 export { default as Rating } from './movie/movie-item/Rating';
 export { default as GenreList } from './movie/movie-item/GenreList';
 export { default as MovieItem } from './movie/movie-item/MovieItem';

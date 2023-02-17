@@ -7,7 +7,7 @@ import Screen404 from '@/components/screens/system/Screen404';
 import { useAuth } from '@/hooks/useAuth';
 
 import { TypeRootStackParamList } from './navigation.types';
-import { routes } from './user.routes';
+import { routes, userRoutes } from './user.routes';
 
 const Stack = createStackNavigator<TypeRootStackParamList>();
 
@@ -24,16 +24,10 @@ const PrivateNavigator: FC = () => {
       }}
     >
       {user ? (
-        routes.map(route =>
-          user.isAdmin || !route.isAdmin ? (
-            <Stack.Screen key={route.name} {...route} />
-          ) : (
-            <Stack.Screen
-              key="Screen404"
-              name="Screen404"
-              component={Screen404}
-            />
-          )
+        user?.isAdmin ? (
+          routes.map(route => <Stack.Screen key={route.name} {...route} />)
+        ) : (
+          userRoutes.map(route => <Stack.Screen key={route.name} {...route} />)
         )
       ) : (
         <Stack.Screen name="Auth" component={Auth} />
