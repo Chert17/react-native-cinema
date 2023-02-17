@@ -53,11 +53,7 @@ const Profile: FC = () => {
         ) : (
           <View className="mb-10">
             <AuthFields control={control} />
-            <Button
-              onPress={handleSubmit(onSubmit)}
-              icon="edit"
-              className={'w-7/12 mx-auto'}
-            >
+            <Button onPress={handleSubmit(onSubmit)} icon="edit">
               Update profile
             </Button>
           </View>

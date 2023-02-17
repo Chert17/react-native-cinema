@@ -10,6 +10,7 @@ const AdminTableItem: FC<IAdminTableItem> = ({ removeHandler, tableItem }) => {
     <View className="flex-row items-center bg=[#151515] bg-opacity-20 mt-3 px-3 rounded-lg">
       {tableItem.items.map((value, index) => (
         <View
+          key={value + index}
           className={cn('py-3 w-32 mx-2', {
             'justify-end': index === tableItem.items.length - 1,
           })}

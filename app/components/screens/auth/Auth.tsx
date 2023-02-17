@@ -36,7 +36,11 @@ const Auth: FC = () => {
           ) : (
             <>
               <AuthFields control={control} isPassRequired />
-              <Button onPress={handleSubmit(onSubmit)} icon={'film'}>
+              <Button
+                onPress={handleSubmit(onSubmit)}
+                icon={'film'}
+                className="w-3/4"
+              >
                 Go to watch
               </Button>
 

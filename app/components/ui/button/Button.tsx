@@ -13,7 +13,7 @@ const Button: FC<PropsWithChildren<IButton>> = ({
   ...rest
 }) => {
   return (
-    <Pressable className={cn(' mt-3.5', className)} {...rest}>
+    <Pressable className={cn(' mt-3.5 w-7/12 mx-auto', className)} {...rest}>
       <LinearGradient
         start={{ x: 0, y: 0.75 }}
         end={{ x: 1, y: 0.25 }}
