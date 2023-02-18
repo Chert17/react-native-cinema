@@ -5,7 +5,7 @@ import { getActorsUrl } from '@/config/api.config';
 import { request } from './api/request.api';
 
 export const ActorService = {
-  async getAll(searchTerm: string) {
+  async getAll(searchTerm?: string) {
     return request<IActor[]>({
       url: getActorsUrl(''),
       method: 'GET',
